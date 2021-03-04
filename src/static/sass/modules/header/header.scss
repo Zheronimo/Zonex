@@ -1,0 +1,43 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  & .container {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    margin-right: 254px;
+  }
+  &-top {
+    text-align: center;
+    padding: 15px 0;
+    background-color: $cod-gray-bg;
+    &__text {
+      font-size: 10px;
+      color: $white;
+      text-transform: uppercase;
+    }
+    &__icon {
+      fill: $white;
+      @include size(16px);
+    }
+  }
+}
+.logo {
+  display: inline-block;
+  height: 22px;
+  width: 117px;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    fill: $color-dark;
+  }
+}

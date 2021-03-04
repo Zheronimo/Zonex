@@ -1,0 +1,29 @@
+.subscribe-form {
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-dark;
+  }
+  &__info {
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 40px;
+  }
+  &__field {
+    flex-grow: 1;
+    input {
+      width: 95%;
+      border: none;
+    }
+  }
+  &__btn {
+    flex-grow: 0;
+  }
+}

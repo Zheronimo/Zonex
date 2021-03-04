@@ -1,0 +1,20 @@
+.btn-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    font-size: 13px;
+    color: $color-gray;
+  }
+  &__icon {
+    @include size(21px);
+    fill: $color-dark;
+  }
+}

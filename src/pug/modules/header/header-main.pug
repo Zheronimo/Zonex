@@ -1,0 +1,22 @@
+header.header
+    .header-top
+        span.header-top__text Free delivery from $60 and free returns
+        button.btn-reset.header-top__close
+            +icon('close','header-top__icon')
+    .container 
+        include ../nav/nav
+        a.logo.header__logo(href="./index.html" aria-label="logo")
+            svg
+                use(xlink:href="static/img/svg/symbol/sprite.svg#logo")
+        ul.user.header__user
+            li.uset__item
+                form(action="#").user__search-form.search-form
+                    button(area-label="find").btn-reset.search-form__btn
+                        +icon('loupe', 'search-form__icon')
+            li.uset__item
+                a.user__link(href="" aria-label="go to cabinet")
+                    +icon('user', 'user__icon')
+            li.uset__item
+                a.user__link(href="").user__link.cart
+                    +icon('shopping-bag', 'cart__icon')
+                    span.cart__quantity 3

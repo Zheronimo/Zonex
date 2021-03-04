@@ -1,2 +1,54 @@
-footer
-    .wrapper
+footer.footer 
+    .container.footer__container
+        .footer__top
+            .footer__column 
+                h3.footer__title Customer service
+                ul.footer__list 
+                    li.footer__item 
+                        a(href='tel:+8665972742').footer__link Phone: +866.597.2742
+                    li.footer__item 
+                        a.footer__link Live chat
+                    li.footer__item 
+                        a.footer__link About Us
+                    li.footer__item 
+                        a.footer__link Terms & Conditions
+            .footer__column 
+                h3.footer__title Company
+                ul.footer__list 
+                    li.footer__item 
+                        a(href='#').footer__link What We Do
+                    li.footer__item 
+                        a(href='#').footer__link Available Services
+                    li.footer__item 
+                        a(href='#').footer__link Latest Posts
+                    li.footer__item 
+                        a(href='#').footer__link FAQs
+            .footer__column 
+                h3.footer__title Our newsletter
+                span.subscribe-form__info Join our list and get 15% off your first purchase!
+                form.footer__form.subscribe-form(action="")
+                    label.subscribe-form__field
+                        input(type="mail" placeholder="Email Address")
+                    button(type="submit").btn-reset.subscribe-form__btn Subscribe
+                span.footer__text *Don’t worry we don’t spam
+        .footer__bottom.footer-bottom
+            ul.footer-bottom__list 
+                li.footer-bottom__item 
+                    a.footer-bottom__link Returns Policy
+                li.footer-bottom__item 
+                    a.footer-bottom__link Privacy Policy
+                li.footer-bottom__item 
+                    a.footer-bottom__link Privacy Policy
+            ul.footer__social.social 
+                li.social__item
+                    a(href="#" aria-label='Go to twitter').social__link  
+                        +icon('twitter','social__icon')
+                li.social__item
+                    a(href="#" aria-label='Go to facebook').social__link  
+                        +icon('facebook','social__icon')
+                li.social__item
+                    a(href="#" aria-label='Go to instagram').social__link  
+                        +icon('instagram','social__icon')
+                li.social__item
+                    a(href="#" aria-label='Go to pinterest').social__link  
+                        +icon('pinterest','social__icon')

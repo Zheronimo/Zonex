@@ -1,41 +1,49 @@
-@import 'libs/libs';
-@import 'layout/mixin/mixins';
-@import 'layout/mixin/font-face';
-@import 'layout/fonts';
-@import 'layout/vars';
-
+@import "libs/libs";
+@import "layout/mixin/mixins";
+@import "layout/mixin/font-face";
+@import "layout/fonts";
+@import "layout/vars";
 
 html {
-	font-size: $baseFontSize;
-	height: 100%;
-	&.fixed {
-		overflow: hidden;
-		body {
-			overflow: hidden;
-		}
-	}
+  font-size: $baseFontSize;
+  height: 100%;
+  &.fixed {
+    overflow: hidden;
+    body {
+      overflow: hidden;
+    }
+  }
 }
 body {
-	font-family: $mainFont;
-	height: 100%;
-	overflow-x: hidden;
+  font-family: $mainFont;
+  font-weight: 500;
+  height: 100%;
+  overflow-x: hidden;
+  color: $color-dark;
+  background-color: $white;
 }
-h1,h2,h3,h4,h5,h6 {
-	margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
-ul,li {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 p {
-	margin: 0;
+  margin: 0;
 }
 
 a {
-	color: black;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 audio,
 canvas,
@@ -43,25 +51,27 @@ iframe,
 img,
 svg,
 video {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 
 textarea {
-	resize: none;
+  resize: none;
 }
 
 section {
-	position: relative;
+  position: relative;
 }
 
 input,
 select,
 button {
-	outline: none;
+  outline: none;
 }
 
-*, *:before, *:after {
-	box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 .visually-hidden {
@@ -69,6 +79,7 @@ button {
 }
 
 .btn-reset {
+  font-family: $mainFont;
   border: none;
   padding: 0;
   background: transparent;
@@ -76,22 +87,38 @@ button {
 }
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .content {
-	flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 .container {
-	width: 100%;
-	max-width: $contentSize;
-	margin: 0 auto;
-	padding: 0 15px;
-	position: relative;
+  width: 100%;
+  max-width: $contentSize;
+  margin: 0 auto;
+  padding: 0 50px;
+  position: relative;
 }
-
-
+.main-link {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: $color-dark;
+    @include shift();
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
 
 // Модули
 @import "modules/modules";

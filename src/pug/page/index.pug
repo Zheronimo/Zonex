@@ -1,8 +1,15 @@
 extends ../main-layout
 
 block variables
-	- var title = 'Главная страница'
+	- var title = 'Home'
 	- var pageClass = 'index-page'
 
 block content
-	h1 Hello worldkjg
+	.wrapper
+		include ../modules/header/header
+		main.main
+			include ../modules/hero/hero
+			include ../modules/banners/banners
+			include ../modules/main-products/main-products
+			include ../modules/shop-banners/shop-banners
+		include ../modules/footer/footer

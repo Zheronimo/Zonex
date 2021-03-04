@@ -1,0 +1,53 @@
+section.main-products
+    .container.main-products__container
+        h2.visually-hidden Products on main page
+        ul.main-products__nav
+            li.main-products__item
+                button.btn-reset.main-link.main-products__link.main-products__link--active(href="#" data-filter='best-sellers') Best Sellers
+            li.main-products__item
+                button.btn-reset.main-link.main-products__link(href="#" data-filter='new-products') New Products
+            li.main-products__item
+                button.btn-reset.main-link.main-products__link(href="#" data-filter='sale-products') Sale Products
+        .main-products__content
+            ul.main-products__list.best-sellers.main-products__list--active
+                li.main-products__item
+                    include ./products/product1
+                li.main-products__item
+                    include ./products/product2
+                li.main-products__item
+                    include ./products/product3
+                li.main-products__item
+                    include ./products/product4
+                li.main-products__item
+                    include ./products/product5
+                li.main-products__item
+                    include ./products/product2
+                li.main-products__item
+                    include ./products/product2
+                li.main-products__item
+                    include ./products/product2
+                li.main-products__item
+                    include ./products/product2
+            ul.main-products__list.new-products
+                li.main-products__item
+                    include ./products/product1
+                li.main-products__item
+                    include ./products/product2
+                li.main-products__item
+                    include ./products/product3
+                li.main-products__item
+                    include ./products/product4
+            ul.main-products__list.sale-products
+                li.main-products__item
+                    include ./products/product1
+                li.main-products__item
+                    include ./products/product2
+                li.main-products__item
+                    include ./products/product3
+                li.main-products__item
+                    include ./products/product4
+                li.main-products__item
+                    include ./products/product5
+        button.btn-reset.btn-more.main-products__btn-more
+            span.btn-more__text Load More
+            +icon("down-arrow","btn-more__icon")

@@ -1,0 +1,33 @@
+.user {
+  display: flex;
+  align-items: center;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+  & .icon {
+    @include size(16px);
+  }
+}
+.cart {
+  display: flex;
+  align-items: center;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  &__quantity {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    height: 16px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: $color-dark;
+    color: $white;
+  }
+}
